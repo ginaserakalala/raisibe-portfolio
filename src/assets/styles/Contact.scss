@@ -3,7 +3,6 @@
   vertical-align: middle;
   margin-right: 5px;
 }
-
 .contact-form {
   padding-top: 20px;
 
@@ -12,12 +11,10 @@
     background-color: white;
     color: #050f0b;
   }
-
   button:hover {
     background-color: #5000ca;
     color: white;
   }
-
   fieldset {
     background-color: white;
   }
@@ -32,6 +29,7 @@ label {
   display: flex;
   gap: 15px;
   padding-bottom: 15px;
+
 }
 
 .form-flex .MuiFormControl-root {

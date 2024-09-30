@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 import '../assets/styles/Contact.scss';
-// import emailjs from '@emailjs/browser';
+import emailjs from '@emailjs/browser';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import SendIcon from '@mui/icons-material/Send';
@@ -25,28 +25,36 @@ function Contact() {
     setEmailError(email === '');
     setMessageError(message === '');
 
-    /* Uncomment below if you want to enable the emailJS */
+    /* Uncomment below to enable the emailJS */
 
-    // if (name !== '' && email !== '' && message !== '') {
-    //   var templateParams = {
-    //     name: name,
-    //     email: email,
-    //     message: message
-    //   };
+    if (name !== '' && email !== '' && message !== '') {
+      var templateParams = {
+        name: name,
+        email: email,
+        message: message
+      };
 
-    //   console.log(templateParams);
-    //   emailjs.send('service_id', 'template_id', templateParams, 'api_key').then(
-    //     (response) => {
-    //       console.log('SUCCESS!', response.status, response.text);
-    //     },
-    //     (error) => {
-    //       console.log('FAILED...', error);
-    //     },
-    //   );
-    //   setName('');
-    //   setEmail('');
-    //   setMessage('');
-    // }
+      console.log(templateParams);
+
+      emailjs.send(
+          process.env.REACT_APP_EMAILJS_SERVICE_ID!,
+          process.env.REACT_APP_EMAILJS_TEMPLATE_ID!,
+          templateParams,
+          process.env.REACT_APP_EMAILJS_PUBLIC_KEY!
+      ).then(
+        (response) => {
+          console.log('SUCCESS!', response.status, response.text);
+          alert('Email sent successfully');
+          window.location.reload();
+        },
+        (error) => {
+          console.log('FAILED...', error);
+        },
+      );
+      setName('');
+      setEmail('');
+      setMessage('');
+    }
   };
 
   return (
@@ -63,19 +71,61 @@ function Contact() {
             className='contact-form'
           >
             <div className='form-flex'>
+
               <TextField
+                  variant="filled"
+                  color="secondary"
+                  sx={{
+                    "& .MuiFilledInput-root": {
+                      color: "#000",
+                      fontFamily: "Arial",
+                      fontWeight: "bold",
+                      backgroundColor: "white",
+                      borderTopLeftRadius: "7px",
+                      borderTopRightRadius: "7px",
+                      "&:before": {
+                        borderColor: "#2e2e2e",
+                        borderWidth: "2px",
+                      },
+                    },
+                    "& .MuiInputLabel-filled": {
+                      color: "#2e2e2e",
+                      fontWeight: "bold",
+                    },
+                  }}
                 required
                 id="outlined-required"
                 label="Your Name"
                 placeholder="What's your name?"
                 value={name}
                 onChange={(e) => {
+                  console.log( `Name changed : ${e.target.value}` );
                   setName(e.target.value);
                 }}
                 error={nameError}
                 helperText={nameError ? "Please enter your name" : ""}
               />
               <TextField
+                  variant="filled"
+                  color="secondary"
+                  sx={{
+                    "& .MuiFilledInput-root": {
+                      color: "#000",
+                      fontFamily: "Arial",
+                      fontWeight: "bold",
+                      backgroundColor: "white",
+                      borderTopLeftRadius: "7px",
+                      borderTopRightRadius: "7px",
+                      "&:before": {
+                        borderColor: "#2e2e2e",
+                        borderWidth: "2px",
+                      },
+                    },
+                    "& .MuiInputLabel-filled": {
+                      color: "#2e2e2e",
+                      fontWeight: "bold",
+                    },
+                  }}
                 required
                 id="outlined-required"
                 label="Email / Phone"
@@ -89,6 +139,26 @@ function Contact() {
               />
             </div>
             <TextField
+                variant="filled"
+                color="secondary"
+                sx={{
+                  "& .MuiFilledInput-root": {
+                    color: "#000",
+                    fontFamily: "Arial",
+                    fontWeight: "bold",
+                    backgroundColor: "white",
+                    borderTopLeftRadius: "7px",
+                    borderTopRightRadius: "7px",
+                    "&:before": {
+                      borderColor: "#2e2e2e",
+                      borderWidth: "2px",
+                    },
+                  },
+                  "& .MuiInputLabel-filled": {
+                    color: "#2e2e2e",
+                    fontWeight: "bold",
+                  },
+                }}
               required
               id="outlined-multiline-static"
               label="Message"

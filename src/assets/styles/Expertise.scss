@@ -10,7 +10,7 @@
 }
   
 .skills-container .skills-grid {
-    display: grid;
+    display: flex;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 50px;
 }
