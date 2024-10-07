@@ -9,17 +9,15 @@ function Main() {
     <div className="container">
       <div className="about-section">
         <div className="image-wrapper">
-          {/*<img src="https://my-aws-assets.s3.us-west-2.amazonaws.com/portfolio-img/avatar_circle.jpeg" alt="Avatar" />*/}
-          <img src="" alt="Avatar" />
+          <img src="https://live.staticflickr.com/65535/54049369584_295b02f34a_n.jpg" alt="Avatar" />
         </div>
         <div className="content">
           <div className="social_icons">
             <a href="https://github.com/ginaserakalala" target="_blank" rel="noreferrer"><GitHubIcon/></a>
             <a href="https://www.linkedin.com/in/gina-shttps://www.linkedin.com/in/gina-serakalala/" target="_blank" rel="noreferrer"><LinkedInIcon/></a>
           </div>
-          <h1>Hi, </h1>
-          <h1>I'm <strong>Raisibe Serakalala.</strong></h1>
-          <p>I'm a full Stack Developer</p>
+          <h1>Raisibe Serakalala</h1>
+          <p>Full Stack Developer</p>
 
           <div className="mobile_social_icons">
             <a href="https://github.com/ginaserakalala" target="_blank" rel="noreferrer"><GitHubIcon/></a>
