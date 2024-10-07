@@ -25,7 +25,7 @@ function Contact() {
         setEmailError(email === '');
         setMessageError(message === '');
 
-        /* Uncomment below to enable the emailJS */
+
 
         if (name !== '' && email !== '' && message !== '') {
             var templateParams = {
@@ -34,7 +34,6 @@ function Contact() {
                 message: message
             };
 
-            console.log(templateParams);
 
             emailjs.send(
                 process.env.REACT_APP_EMAILJS_SERVICE_ID!,
@@ -43,7 +42,6 @@ function Contact() {
                 process.env.REACT_APP_EMAILJS_PUBLIC_KEY!
             ).then(
                 (response) => {
-                    console.log('SUCCESS!', response.status, response.text);
                     alert('Email sent successfully');
                     window.location.reload();
                 },
@@ -104,7 +102,6 @@ function Contact() {
                                 placeholder="What's your name?"
                                 value={name}
                                 onChange={(e) => {
-                                    console.log(`Name changed : ${e.target.value}`);
                                     setName(e.target.value);
                                 }}
                                 error={nameError}
