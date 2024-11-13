@@ -19,7 +19,11 @@ function Project() {
                     <a href="https://github.com/ginaserakalala/ecommerce-ui" target="_blank" rel="noreferrer"><h2>SnowySky
                         Art
                         Gallery</h2></a>
-                    <p>Developed a web application using Java and Angular that runs an ai generated art gallery</p>
+                    <p>Inspired by a vision of accessible digital art,
+                        I created SnowySky to showcase AI-generated artwork. Using Java and Angular,
+                        I developed a dynamic,
+                        curated gallery that provides a fresh visual experience each visit,
+                        merging tech and creativity for an engaging user journey.</p>
                 </div>
 
                 <div className="project">
@@ -29,7 +33,9 @@ function Project() {
                         alt="thumbnail"
                         width="100%"/></a>
                     <a href="https://github.com/ginaserakalala/currency-converter" target="_blank" rel="noreferrer"><h2>Currency Converter</h2></a>
-                    <p>Developed a web application that converts currencies using Vuejs and Nodejs that runs</p>
+                    <p> The Currency Converter project came from the need for simplicity in international transactions.
+                        I wanted a tool that could offer real-time, accurate conversion rates without the unnecessary
+                        features of many online converters using Vue.js and Node.js</p>
                 </div>
 
                 <div className="project">
@@ -40,8 +46,10 @@ function Project() {
                         width="100%"/></a>
                     <a href="https://github.com/ginaserakalala/recipe-finder" target="_blank" rel="noreferrer"><h2>Taste
                         Quest</h2></a>
-                    <p>Developed a web application that returns recipes based on the ingredients that a user enters
-                        using Angular and Nodejs</p></div>
+                    <p>Taste Quest was born from the challenge of cooking with limited ingredients.
+                        With Angular and Node.js, I created a user-friendly app to suggest recipes
+                        based on what’s on hand,
+                        encouraging resourcefulness and creativity in the kitchen.</p></div>
 
                 <div className="project">
                     <a href="https://github.com/ginaserakalala/space-images-explorer" target="_blank" rel="noreferrer"><img
@@ -51,8 +59,10 @@ function Project() {
                         width="100%"/></a>
                     <a href="https://github.com/ginaserakalala/space-images-explorer" target="_blank" rel="noreferrer"><h2>Space
                         Explorer</h2></a>
-                    <p>Developed a web application using Reactjs and Nodejs that allows users to view space images from
-                        NASA.</p>
+                    <p>Fascinated by space, I developed Space Explorer to bring NASA’s incredible images
+                        to users. Built with React.js and Node.js, the app lets users explore the cosmos
+                        from their screens,
+                        making the wonders of space both accessible and captivating</p>
                 </div>
             </div>
 
