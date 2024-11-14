@@ -16,7 +16,8 @@ const labelsFirst = [
   "Grafana",
   "Git",
   "ActiveMQ",
-  "Backstage framework"
+  "Backstage framework",
+  "Redis"
 ];
 
 const labelFirstKnowledge = [
