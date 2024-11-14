@@ -16,7 +16,8 @@ const labelsFirst = [
     "Python",
     "MySQL",
     "PostgreSQL",
-    "RabbitMQ/ActiveMQ",
+    "RabbitMQ",
+    "ActiveMQ",
     "Redis",
     "Docker"
 ];
